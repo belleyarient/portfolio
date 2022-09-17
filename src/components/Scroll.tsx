@@ -10,7 +10,7 @@ const Scroll = ({children, delay, origin}:{children:any, delay:any, origin:any})
 useEffect(() => {
     if(cardRef.current) {
         ScrollReveal().reveal(cardRef.current, {
-            reset: true,
+            reset: false,
             delay: delay,
             origin: origin,
             opacity: 0,

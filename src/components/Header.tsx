@@ -73,10 +73,10 @@ const Header = () => {
   </Navbar.Collapse>
   </Container>
 </Navbar> */}
-      <AppBar position="static">
+      <AppBar position="static" style={{backgroundColor:'#202020'}}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+            {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
             <Typography
               variant="h6"
               noWrap
@@ -92,7 +92,7 @@ const Header = () => {
                 textDecoration: 'none',
               }}
             >
-              LOGO
+              My Portfolio
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -143,13 +143,22 @@ const Header = () => {
                 //   variant='contained'
                   color='primary'
                   component={Link}
+                  to='/profile'
+                >
+                  <Typography textAlign="center">PROFILE</Typography>
+                </MenuItem>
+
+                <MenuItem onClick={handleCloseNavMenu}
+                //   variant='contained'
+                  color='primary'
+                  component={Link}
                   to='/blog'
                 >
-                  <Typography textAlign="center">BLOG</Typography>
+                  <Typography textAlign="center">ABOUT</Typography>
                 </MenuItem>
               </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+            {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
             <Typography
               variant="h5"
               noWrap
@@ -166,7 +175,7 @@ const Header = () => {
                 textDecoration: 'none',
               }}
             >
-              LOGO
+              My Portfolio
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {/* {pages.map((page) => (
@@ -191,10 +200,19 @@ const Header = () => {
               <Button
                 onClick={handleCloseNavMenu}
                 component={Link}
+                to='/profile'
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                PROFILE
+              </Button>
+
+              <Button
+                onClick={handleCloseNavMenu}
+                component={Link}
                 to='/blog'
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                BLOG
+                ABOUT
               </Button>
 
             </Box>
@@ -203,6 +221,7 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
+      
     </header>
   )
 }
